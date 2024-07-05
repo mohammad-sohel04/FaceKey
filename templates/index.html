@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Based Face Authentication</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <style>
+        body {
+            background-image: url('https://img.freepik.com/free-vector/technology-wire-mesh-network-connection-digital-background_1017-28407.jpg?t=st=1720190815~exp=1720194415~hmac=8b06bcfcdaf20337445ba77feedebb94052ddcb0b63a4ab6364b48147432f38d&w=1380');
+            background-size: cover;
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .wrapper {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .wrapper ul {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .wrapper ul li {
+            margin-right: 20px;
+        }
+        
+        .wrapper ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .wrapper ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+        }
+        
+        .content {
+            text-align: center;
+            color: #ffffff;
+            margin-top: 20px;
+        }
+        
+        .title {
+            font-size: 3rem;
+            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+        }
+        
+        .content-center {
+            text-align: center;
+            color: #ffffff;
+            margin-top: 20px;
+        }
+        
+        .description {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn"><span></span></label>
+    <label for="active" class="close"></label>
+    <div class="wrapper">
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('add_user') }}">+User</a></li>
+            <li><a href="{{ url_for('login') }}">Authentication</a></li>
+            <li><a href="{{ url_for('team') }}">Team</a></li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
+    </div>
+    
+    <div class="content">
+        <div class="title">Web Based Face Authentication</div>
+    </div>
+    
+    
+</body>
+</html>
